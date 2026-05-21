@@ -1,0 +1,22 @@
+[build-system]
+requires = [
+  "scikit-build-core>=0.10",
+  "nanobind>=2.0",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "dm_openarm"
+version = "0.1.0"
+description = "Python bindings for the DM OpenArm USB-CANFD controller"
+requires-python = ">=3.8"
+
+[tool.scikit-build]
+minimum-version = "0.10"
+build-dir = "build/{wheel_tag}"
+wheel.packages = ["python/dm_openarm"]
+
+[tool.scikit-build.cmake.define]
+DM_OPENARM_BUILD_PYTHON = "ON"
+DM_OPENARM_BUILD_EXAMPLES = "OFF"
+BUILD_TESTING = "OFF"

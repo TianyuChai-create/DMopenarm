@@ -1,0 +1,34 @@
+usb:
+  serial: "14AA044B241402B10DDBDAFE448040BB"
+  nominal_baud: 1000000
+  data_baud: 1000000
+
+control:
+  loop_period_ms: 1
+
+motors:
+  - name: end_effector
+    model: DM4310
+    mode: MIT
+    can_id: 0x01
+    mst_id: 0x11
+  - name: wrist_2
+    model: DM4310
+    mode: MIT
+    can_id: 0x02
+    mst_id: 0x12
+  - name: wrist_3
+    model: DM4310
+    mode: MIT
+    can_id: 0x03
+    mst_id: 0x13
+  - name: elbow
+    model: DM8009
+    mode: MIT
+    can_id: 0x04
+    mst_id: 0x14
+  - name: shoulder
+    model: DM8009
+    mode: MIT
+    can_id: 0x05
+    mst_id: 0x15
