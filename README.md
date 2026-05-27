@@ -432,3 +432,7 @@ Python 的 `arm.mit(...)` 不会自动应用 FIFO 示例里的单步限制和斜
 - `arm.mit(...)` 会立即更新目标命令；Python API 当前没有自动斜坡限制。
 - 初次测试建议只控制单个电机，使用小角度、低增益和 `tau=0.0`。
 - 所有会运动机械臂的脚本都应使用 `try/finally`，退出时执行 `stop_mit_loop()` 和 `disable()`。
+
+## Related Projects
+
+This library builds on [dm-motor-driver](https://github.com/TianyuChai-create/dm-motor-driver) for low-level motor control.
